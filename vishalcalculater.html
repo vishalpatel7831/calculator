@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>vishal calculator</title>
+</head>
+<body id="bo">
+   <center>
+    <div class="jumbotron" id="non">
+<div id="vp">
+      
+        <div>
+             <input type="text" id="result">
+           
+            <input type="button" id="q" value="c" onclick="clr()"> 
+            </br>
+         </div>
+         
+            <div >
+            <input type="button" id="a" value="1" onclick="dis('1')"/>
+            <input type="button" id="b" value="2" onclick="dis('2')"/> 
+            <input type="button"  id="c" value="3" onclick="dis('3')"/> 
+            <input type="button" id="d" value="/" onclick="dis('/')"/>  
+          </div>
+       
+          <div>
+            <input type="button" id="e" value="4" onclick="dis('4')"/> 
+            <input type="button" id="f" value="5" onclick="dis('5')"/> 
+            <input type="button"  id="g" value="6" onclick="dis('6')"/>  
+            <input type="button"  id="h" value="-" onclick="dis('-')"/>  
+          </div>
+       
+
+       <div>
+            <input type="button"id="w" value="7" onclick="dis('7')"/> 
+            <input type="button"id="i" value="8" onclick="dis('8')"/> 
+            <input type="button"id="j" value="9" onclick="dis('9')"/>  
+            <input type="button"id="k" value="+" onclick="dis('+')"/> 
+         </div>
+      
+      <div>
+            <input type="button"id="l" value="." onclick="dis('.')"/> 
+            <input type="button" id="m"value="0" onclick="dis('0')"/> 
+        
+            <input type="button" id="r"value="=" onclick="solve()"/> 
+            <input type="button" id="s"value="*" onclick="dis('*')"/>  
+        </div>
+       
+      </div>
+</div>
+<p>set calsi background</p>
+<input type="text" placeholder="calsi colorname" id="bc">
+<p>set page background</p>
+<input type="text" placeholder="page color" id="bd">
+<p>set font color</p>
+<input type="text" placeholder="fontcolor" id="be">
+<p>set button color</p>
+<input type="text" placeholder="button color" id="bf">
+<br>
+<button class="btn btn-success" id="kl" onclick="change()">submit</button>
+
+   <blockquote class="text-center" id="vil">
+<footer class="blockquote-footer">created by<cite title="vishal"> vishal</cite></footer>
+</blockquote>
+
+      </center>
+   
+      <script>
+var n=["a","b","c","d","e","f","g","h","i","j","k","l","m","q","r","s","w"]
+
+var p=document.getElementById("result");
+var bc=document.getElementById("bc");
+var bd=document.getElementById("bd");
+var be=document.getElementById("be");
+ var button=document.getElementById("button");            
+function dis(val) 
+         { 
+             p.value+=val 
+           
+         } 
+           
+         //function that evaluates the digit and return result 
+         
+function solve(){
+
+let x=p.value
+let y=eval(x)
+p.value=y
+
+}
+function clr(){
+  p.value=""
+
+
+}
+function change(){
+  non.style.background=bc.value;
+  bo.style.background=bd.value;
+  for(i=0;i<n.length;i++){
+var o=document.getElementById(n[i])
+o.style.color=be.value;
+result.style.color=be.value;
+o.style.background=bf.value;
+
+}
+}
+
+
+ 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+     #kl{
+        margin: 10px;
+        border-radius: 50%;
+        color: black;
+        
+        
+
+      }
+       input[type="button"] {
+      width: 100px;
+      background:steelblue;
+      font-weight: bold;
+      }
+      input[type="text"]{
+         width:309px;
+         border: 2px solid steelblue;
+         font-weight: bold;
+         text-align: center;
+      }
+      div{
+         margin-top: 10px;
+        
+      }
+      #vp{
+         
+         margin-top: 150px;
+         
+
+      }
+      body{
+          background:gray;
+          background-size: 20px 10px;
+          background-attachment: fixed;
+         background-repeat: no-repeat;
+      background-position: center;
+      }
+      .jumbotron{
+        height: 600px;
+        width: 480px;
+        background:orange;
+      
+
+      }
+      #vil{
+        color: red;
+      }
+     
+
+
+  </style>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</body>
+</html>
